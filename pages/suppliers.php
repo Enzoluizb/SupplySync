@@ -30,7 +30,7 @@ $result = $conn->query($query);
     <main class="main-content">
         <h1>Gestão de Fornecedores</h1>
         <p>Gerencie os fornecedores cadastrados no sistema.</p>
-        <a href="add_supplier.php" class="btn">Adicionar Fornecedor</a>
+        <a href="subpages/add_supplier.php" class="btn">Adicionar Fornecedor</a>
         <table class="suppliers-table">
             <thead>
                 <tr>
@@ -50,8 +50,8 @@ $result = $conn->query($query);
                             <td><?= $row['phone'] ?></td>
                             <td><?= $row['email'] ?></td>
                             <td>
-                                <a href="edit_supplier.php?id=<?= $row['id'] ?>" class="btn">Editar</a>
-                                <a href="delete_supplier.php?id=<?= $row['id'] ?>" class="btn delete-btn">Excluir</a>
+                                <a href="subpages/edit_supplier.php?id=<?= $row['id'] ?>" class="btn">Editar</a>
+                                <a href="subpages/delete_supplier.php?id=<?= $row['id'] ?>" class="btn delete-btn">Excluir</a>
                             </td>
                         </tr>
                     <?php endwhile; ?>
