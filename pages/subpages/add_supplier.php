@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $query = "INSERT INTO suppliers (name, phone, email) VALUES ('$name', '$phone', '$email')";
     if ($conn->query($query)) {
-        header('Location: suppliers.php');
+        header('Location: ../../pages/suppliers.php');
     } else {
         echo "Erro ao cadastrar fornecedor: " . $conn->error;
     }
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <?php include '../includes/header.php'; ?>
+    <?php include '../../includes/header.php'; ?>
     <main class="main-content">
         <h1>Adicionar Fornecedor</h1>
         <form action="" method="POST" class="supplier-form">
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="btn">Cadastrar</button>
         </form>
     </main>
-    <?php include '../includes/footer.php'; ?>
+    <?php include '../../includes/footer.php'; ?>
 </body>
 
 </html>
